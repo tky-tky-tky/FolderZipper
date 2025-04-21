@@ -87,7 +87,7 @@ class ZipApp(QWidget):
             # 進行状況をラベルに表示
             self.label.setText(f"{zip_name} を作成中...")
 
-            # 7zipを使用して無圧縮ZIPを作成
+            # 7zipを使用して無圧縮ZIPを作成(7zipの保存先が違う場合はここを編集)
             subprocess.run(["D:\\Program Files\\7-Zip\\7z.exe", "a", "-tzip", "-mx=0", zip_path, os.path.join(folder_path, "*")], shell=True)
 
 
